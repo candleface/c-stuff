@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+bool valid_triangle (int x, int y, int z);
+bool valid_triangle1 (int x, int y, int z);
+
+int main() {
+    //get input for x, y, and z
+    int x = -5 ;
+    int y = 4 ;
+    int z = 70 ;
+    
+    // use valid_triangle func
+    bool hi = valid_triangle(x,y,z);
+    bool bye = valid_triangle1(x,y,z);
+    
+    //print if it is valid or not
+    printf (" %i", hi);
+    printf (" %i", bye); // Output: 1 for true, 0 for false
+    return 0;
+
+}
+
+bool valid_triangle (int x, int y, int z)
+{
+    // x + y or y+z or x+z must be equal to z, x or y respectively
+    bool sum;
+    if ( x + y == z && x + z == y && y + z == x)
+        sum = true;
+        
+    else
+        sum = false;
+        
+    return sum ;
+}    
+
+bool valid_triangle1 (int x, int y, int z)
+{
+    // x,y,z > 0
+    bool positive;
+    if ( x > 0 && y > 0 && z > 0 )
+         positive = true;
+    
+    else
+        positive = false;
+    
+    return positive ;
+}
