@@ -1,0 +1,22 @@
+//type def struct exercise
+#include <stdio.h>
+
+typedef struct{
+        char name[1000];
+        int votes;
+} candidate;
+    
+int main (void){
+    const int num = 2;
+    candidate candidates [num];
+    
+    for (int i = 0; i < num; i++){
+        printf("Name: ");
+        scanf("%s", candidates[i].name );
+    }
+    
+    for (int i = 0; i < num; i++) {
+        printf("Candidate %d: %s\n", i + 1, candidates[i].name);
+    }
+    return 0;
+}
