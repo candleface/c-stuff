@@ -1,0 +1,42 @@
+#include <stdio.h>
+void main()
+{
+	float price1, price2, price3;
+	char company1[50], company2[50], company3[50];
+	// Input details for the first phone
+	printf("Enter the name of the first company: ");
+	scanf("%s", company1);
+
+	printf("Enter the price of the first company's mobile phone: ");
+	scanf("%f", &price1);
+
+	// Input details for the second phone
+	printf("Enter the name of the second company: ");
+	scanf("%s", company2);
+
+	printf("Enter the price of the second company's mobile phone: ");
+	scanf("%f", &price2);
+
+	// Input details for the third phone
+	printf("Enter the name of the third company: ");
+	scanf("%s", company3);
+
+	printf("Enter the price of the third company's mobile phone: ");
+	scanf("%f", &price3);
+
+	// Determine which phone has the highest cost
+	if (price1 > price2 && price1 > price3)
+	{
+	printf("\nThe phone with the highest cost is from %s with a price of %0.2f\n", company1, price1);
+	}
+
+	else if (price2 > price1 && price2 > price3)
+	{
+	printf("\nThe phone with the highest cost is from %s with a price of %0.2f\n", company2, price2);
+	}
+
+	else
+	{
+	printf("\nThe phone with the highest cost is from %s with a price of %0.2f\n", company3, price3);
+	}
+}
